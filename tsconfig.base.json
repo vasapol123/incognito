@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@incognito/models": ["libs/models/src/index.ts"],
+      "@incognito/prisma": ["libs/prisma/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
