@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@incognito/models": ["libs/models/src/index.ts"],
       "@incognito/prisma": ["libs/prisma/src/index.ts"]
     }
   },
