@@ -9,19 +9,15 @@ import {
 
 import { AuthService } from './auth.service';
 import { AuthDto } from './dto/auth.dto';
-import { Tokens } from '../tokens/interface/tokens.interface';
+import { Tokens } from './tokens/interface/tokens.interface';
 import { GetCurrentUserId } from '../../common/decorator/get-current-user-id.decorator';
 import { GetCurrentUser } from '../../common/decorator/get-current-user.decorator';
-import { TokensService } from '../tokens/tokens.service';
-import { RefreshTokenGuard } from '../../common/guards/refresh-token.guard';
+import { RefreshTokenGuard } from './guards/refresh-token.guard';
 import { Public } from '../../common/decorator/public.decorator';
 
 @Controller('auth')
 export class AuthController {
-  constructor(
-    private readonly authService: AuthService,
-    private readonly tokensService: TokensService,
-  ) {}
+  constructor(private readonly authService: AuthService) {}
 
   @Public()
   @Post('local/signup')

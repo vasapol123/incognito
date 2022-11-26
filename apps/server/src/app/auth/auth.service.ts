@@ -1,10 +1,10 @@
 import { Injectable, BadRequestException } from '@nestjs/common';
 import * as argon2 from 'argon2';
 
-import { TokensService } from '../tokens/tokens.service';
+import { TokensService } from './tokens/tokens.service';
 import { UsersService } from '../users/users.service';
 import { AuthDto } from './dto/auth.dto';
-import { Tokens } from '../tokens/interface/tokens.interface';
+import { Tokens } from './tokens/interface/tokens.interface';
 
 @Injectable()
 export class AuthService {
